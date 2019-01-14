@@ -22,9 +22,10 @@ public class SpringBoot06JdbcApplicationTests {
 
     @Test
     public void test() throws Exception {
-        System.out.println(DataSource.class);
+        System.out.println(dataSource.getClass());
         Connection connection = dataSource.getConnection();
         System.out.println(connection);
+        connection.close();
     }
 
 }
